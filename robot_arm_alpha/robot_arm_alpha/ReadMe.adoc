@@ -6,7 +6,7 @@
 
 = Project: Robotic Arm controller from PC
 
-==Description:
+== Description:
 
   Control a 3-axis robotic arm by entering commands via the serial terminal.
   This program is designed for an instruction set as follows:
@@ -14,14 +14,14 @@
   followed by a one-to-three digit number (0-180) indicating the angle that the servo should 
   move to.  Each instruction set is delimited by a ","
   
-  =Example Instructions: 
+  = Example Instructions: 
   2:120 - Servo 2, move to 120 degree position.
   0:0 - Servo 0, move to 0 degree position.
   
   The program can accomadate multiple instruction sets sent at one time, allowing the user to 
   write and send "programs" for the robot arm to follow.
   
-  =Example Program:
+  = Example Program:
   2:80,0:0,1:0,2:145,1:30,0:150,2:90,1:90,
 
 == Step 1: Installation
