@@ -1,4 +1,4 @@
-:Author: TeamLoki
+:Author: Derek Thompson (TeamLoki)
 :Email: teamloki18@gmail.com
 :Date: 25/11/2018
 :Revision: version#1
@@ -6,9 +6,23 @@
 
 = Project: Robotic Arm controller from PC
 
-Description:
+==Description:
 
   Control a 3-axis robotic arm by entering commands via the serial terminal.
+  This program is designed for an instruction set as follows:
+  Servo number (0-2) indicating the servo motor that you want to command delimited by a ":" 
+  followed by a one-to-three digit number (0-180) indicating the angle that the servo should 
+  move to.  Each instruction set is delimited by a ","
+  
+  =Example Instructions: 
+  2:120 - Servo 2, move to 120 degree position.
+  0:0 - Servo 0, move to 0 degree position.
+  
+  The program can accomadate multiple instruction sets sent at one time, allowing the user to 
+  write and send "programs" for the robot arm to follow.
+  
+  =Example Program:
+  2:80,0:0,1:0,2:145,1:30,0:150,2:90,1:90,
 
 == Step 1: Installation
 
@@ -27,15 +41,15 @@ Upload the code contained in this sketch on to your board
 === Folder structure
 
 ....
- sketch123                => Arduino sketch folder
-  ├── sketch123.ino       => main Arduino file
+ robot_arm_alpha                => Arduino sketch folder
+  ├── robot_arm_alpha.ino       => main Arduino file
   ├── schematics.png      => (optional) an image of the required schematics
   ├── layout.png          => (optional) an image of the layout
   └── ReadMe.adoc         => this file
 ....
 
 === License
-This project is released under a {License} License.
+This project is released under the public domain.
 
 === Contributing
 To contribute to this project please contact TeamLoki https://id.arduino.cc/TeamLoki
@@ -44,10 +58,10 @@ To contribute to this project please contact TeamLoki https://id.arduino.cc/Team
 Add the bill of the materials you need for this project.
 
 |===
-| ID | Part name      | Part number | Quantity
-| R1 | 10k Resistor   | 1234-abcd   | 10
-| L1 | Red LED        | 2345-asdf   | 5
-| A1 | Arduino Zero   | ABX00066    | 1
+| ID  | Part name           | Part number | Quantity
+| N/A | 3-axis Robotic arm  |  101-20-128 | 1
+| N/A | Red LED             | 2345-asdf   | 5
+| N/A | Arduino Uno         | ABX00066    | 1
 |===
 
 
